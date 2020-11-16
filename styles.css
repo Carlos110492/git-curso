@@ -1,0 +1,61 @@
+body{
+    --rojo: red; /*crear variables*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#layout{
+    display: flex;/*flex: es como hacer un float left, la caja principal se adapta a todo el ancho de la pantalla, pero no sus elementos. 
+                            inline-flex:la caja se adapta a los elementos que hay dentro*/
+    flex-direction: row; /*direccion de los elementos internos de la caja, como filas y columnas*/
+    flex-wrap: wrap;/*hace que el contenido de la caja no se salga, y vaya acomodando los elementos en filas iguales*/
+    /*flex-flow: row wrap; es lo missmo que poner flex-direction y flex-wrap*/
+    justify-content: space-evenly;/*te permite centrar y alinear el contenido como yo quiera de forma horizontal*/
+    height: 600px;
+    align-items: flex-start;/*te permite centrar y alinear el contenido como yo quiera de forma vertical*/
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja{
+    /*flex-basis: calc((100% / 3) - 68px);
+    flex-grow: 1;/*adapta los elementos al tamaño de la caja principal, o tamnien sirve para dar un 
+                    ancho distinto a un solo elemento o varios, distribuye el espacio en la caja principal*/
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+    background: gray;
+}
+
+.red{
+    align-self: flex-end;/*te permite alinear un elemento de forma vertical*/
+    /*flex-basis: 100%; /*sirve para dar un ancho a un elemnto de una caja, es como un width*/
+    order: 4;/*sirve para cambiar el orden de las cajas internas */
+    background: var(--rojo); /*llamado de la variable en css*/
+}
+
+.green{
+    align-self: start;
+    order: 1;/*sirve para cambiar el orden de las cajas internas */
+    background: green;
+}
+
+
+.blue{
+    align-self: center;
+    /*flex-shrink: 10; sirve para reducir un elemneto de la caja principal*/
+    order: 3;/*sirve para cambiar el orden de las cajas internas */
+    background: blue;
+}
+
+.orange{
+    margin-top: 10%;
+    order: 2;/*sirve para cambiar el orden de las cajas internas */
+    background: orange;
+}
+
